@@ -27,9 +27,9 @@ module.exports = {
 			"error",
 			"tab",
 			{
-				SwitchCase : 1,
+				SwitchCase   : 1,
 				// Delete next line when problem is fixed
-				// ignoredNodes : ["TemplateLiteral"],
+				ignoredNodes : ["TemplateLiteral"],
 			},
 		],
 		"no-mixed-spaces-and-tabs" : [

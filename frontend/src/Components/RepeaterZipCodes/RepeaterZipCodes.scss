@@ -1,6 +1,14 @@
 #RepeaterZipCodes{
     padding: 20px;
     padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    & .content{
+       flex : 70 0;
+    }
 
 
     & p {
@@ -40,26 +48,25 @@
                 text-align: center;
             }
         }
+    }
 
-        & .button {
-            width: 100%;
-            border: none;
-            border-radius: 4px;
-            border : 1px solid #ccc;
-            background-color: #000;
-            color: #fff;
-            padding: 5px;
-            font-size: 1.2rem;
-            text-align: center;
-            height: 35px;
-            cursor: pointer;
-
-            &:hover {
-                background-color: #fff;
-                color: #000;
-                transition: all 0.3s ease-in-out;
-            }
+    .button {
+        width: 150px;
+        border: none;
+        border-radius: 4px;
+        border : 1px solid #ccc;
+        background-color: #000;
+        color: #fff;
+        padding: 5px;
+        font-size: 1.2rem;
+        text-align: center;
+        height: 35px;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: #fff;
+            color: #000;
+            transition: all 0.3s ease-in-out;
         }
     }
-    
 }

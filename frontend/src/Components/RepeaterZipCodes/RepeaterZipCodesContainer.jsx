@@ -30,7 +30,10 @@ function RepeaterZipCodesContainer({
 		resolver : yupResolver(schemaZipCodes),
 	});
 
-	const onSubmit = (data) => addClimate(data.zipCodes, false);
+	const onSubmit = (data) => {
+		const uniqueCode = [...new Set(data.zipCodes)];
+		addClimate(uniqueCode, false);
+	};
 
 	const handleRefresh = () => {
 		const codes = climates.map((item) => item.request.query);

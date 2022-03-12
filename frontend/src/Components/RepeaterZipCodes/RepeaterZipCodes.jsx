@@ -15,46 +15,50 @@ function RepeaterZipCodes({
 	},
 }) {
 	return (
-		LIMIT - climateCount > 0 && (
-			<div id="RepeaterZipCodes">
-				<p>
-					Ingresa tus
-					{ LIMIT }
-					{" "}
-					zip codes (Todos los campos son obligatorios)
-					{" "}
-				</p>
-
-				<form onSubmit={onSubmit} className="inputs">
-					{
-						Array(LIMIT - climateCount).fill(0).map((item, index) => (
-							<div key={index}>
-								<input
-									className={errors?.zipCodes?.[index]?.message ? "errors-border" : ""}
-									type="text"
-									placeholder="Zip Code"
-									{...register(`zipCodes[${index}]`)}
-								/>
-								{
-									errors?.zipCodes?.[index] && (
-										<span className="error">{errors?.zipCodes?.[index]?.message}</span>
-									)
-								}
-							</div>
-						))
-					}
-
-					<button className="button" type="submit" disabled={loading}>
+		<div id="RepeaterZipCodes">
+			{ LIMIT - climateCount > 0 && (
+				<div className="content">
+					<p>
+						Ingresa tus
+						{ LIMIT }
 						{" "}
-						{ loading ? "Cargando..." : "Agregar" }
+						zip codes (Todos los campos son obligatorios)
 						{" "}
-					</button>
-					{ climateCount > 0 && (
-						<button className="button" type="button" onClick={handleRefresh}> Refresh data </button>
-					) }
-				</form>
-			</div>
-		)
+					</p>
+
+					<form onSubmit={onSubmit} className="inputs">
+						{
+							Array(LIMIT - climateCount).fill(0).map((item, index) => (
+								<div key={index}>
+									<input
+										className={errors?.zipCodes?.[index]?.message ? "errors-border" : ""}
+										type="text"
+										placeholder="Zip Code"
+										{...register(`zipCodes[${index}]`)}
+									/>
+									{
+										errors?.zipCodes?.[index] && (
+											<span className="error">{errors?.zipCodes?.[index]?.message}</span>
+										)
+									}
+								</div>
+							))
+						}
+
+						<button className="button" type="submit" disabled={loading}>
+							{" "}
+							{ loading ? "Cargando..." : "Agregar" }
+							{" "}
+						</button>
+					</form>
+				</div>
+			)}
+			{ climateCount > 0 && (
+				<div>
+					<button className="button" type="button" onClick={handleRefresh}> Refresh data </button>
+				</div>
+			)}
+		</div>
 	);
 }
 
