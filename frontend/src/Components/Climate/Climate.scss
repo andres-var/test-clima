@@ -1,0 +1,53 @@
+#Climate{
+    margin: 5px;
+    padding: 10px;
+    background-color: #eee;
+    position: relative;
+
+    &:hover .delete{
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    & .delete{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5px;
+        background-color: #f00;
+        color: #fff;
+        font-size: 1.5em;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    & .item-title{
+        & h3{
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        & p{
+            margin-bottom: 5px;
+            font-size: 14px;
+            color : #666;
+        }
+    }
+
+    & .item-content{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+
+        & p{
+            margin-bottom: 5px;
+            font-size: 14px;
+            
+            & span {
+                font-weight: bold;
+                color : #666;
+            }
+        }
+    }
+}

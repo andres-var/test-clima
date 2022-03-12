@@ -1,0 +1,7 @@
+// ShoppingCarConstants
+
+export const ADD_CLIMATE_FAILURE = "ADD_CLIMATE_FAILURE";
+export const ADD_CLIMATE_STARTED = "ADD_CLIMATE_STARTED";
+export const ADD_CLIMATE_SUCCESS = "ADD_CLIMATE_SUCCESS";
+export const DELETE_CLIMATE      = "DELETE_CLIMATE";
+export const CLEAR_CLIMATE       = "CLEAR_CLIMATE";
