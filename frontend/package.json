@@ -11,8 +11,6 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",
-    "eslint-plugin-align-import": "^1.0.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
     "localforage": "^1.10.0",
     "moment": "^2.29.1",
     "node-sass": "^7.0.1",
@@ -70,6 +68,8 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.3",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-align-import": "^1.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "webpack-dev-server": "3.11.1"
   }
 }
