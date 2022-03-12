@@ -1,8 +1,7 @@
-
 import { Mail } from "react-feather";
 import "./Footer.scss";
 
-const Footer = () => {
+function Footer() {
 	return (
 		<footer id="Footer">
 			<div className="address">
@@ -17,7 +16,13 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className="buttons">
-				<button> <Mail />  <span>CONTÁCTANOS</span> </button>
+				<button>
+					{" "}
+					<Mail />
+					{" "}
+					<span>CONTÁCTANOS</span>
+					{" "}
+				</button>
 			</div>
 			<div className="developers">
 				<div>
@@ -27,6 +32,6 @@ const Footer = () => {
 			</div>
 		</footer>
 	);
-};
+}
 
 export default Footer;

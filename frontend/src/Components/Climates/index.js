@@ -1,1 +1,1 @@
-export { default } from './Climates.jsx';
+export { default } from "./Climates.jsx";

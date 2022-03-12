@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios      from "axios";
 import { APIURL } from "Config";
 
 const instanceAxios = axios.create({
@@ -6,13 +6,13 @@ const instanceAxios = axios.create({
 	timeout : 1000,
 	headers : {
 		"Content-Type" : "application/json",
-		"Accept"       : "application/json",
+		Accept         : "application/json",
 	},
 });
 
-const responseSuccessHandler = response =>  response;
+const responseSuccessHandler = (response) => response;
 
-const responseErrorHandler = error => {
+const responseErrorHandler = (error) => {
 	if (error.response?.status === 401) {
 		return Promise.reject(error);
 	}
@@ -20,8 +20,8 @@ const responseErrorHandler = error => {
 };
 
 instanceAxios.interceptors.response.use(
-	response => responseSuccessHandler(response),
-	error => responseErrorHandler(error)
+	(response) => responseSuccessHandler(response),
+	(error) => responseErrorHandler(error),
 );
 
 instanceAxios.CancelToken = axios.CancelToken;

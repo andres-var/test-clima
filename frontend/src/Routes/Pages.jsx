@@ -11,22 +11,22 @@ import {
 // Import Own Components
 import { appRoutes } from "./AppRoutes";
 
+function Pages() {
+	return (
+		<Suspense fallback={<></>}>
+			<Routes>
+				<Route path="*" element={<Navigate to="/" />} />
 
-const Pages = () => (
-	<Suspense fallback={<></>}>
-		<Routes>
-			<Route path="*" element={<Navigate to="/" />} />
+				<Route exact path="/">
+					{ appRoutes.map(({ path, Component }, i) => (
+						<Route key={i} exact path={path} element={<Component />} />
+					)) }
+				</Route>
 
-			<Route exact path='/'>
-				{ appRoutes.map(({ path, Component }, i) => (
-					<Route key={i} exact path={path} element={<><Component /></>} />
-				)) }
-			</Route>
-
-
-			{/* <Route path="*" element={<Navigate to="/dashboard" />} /> */}
-		</Routes>
-	</Suspense>
-);
+				{/* <Route path="*" element={<Navigate to="/dashboard" />} /> */}
+			</Routes>
+		</Suspense>
+	);
+}
 
 export default Pages;

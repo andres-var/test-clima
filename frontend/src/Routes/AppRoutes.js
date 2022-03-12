@@ -3,8 +3,7 @@ import {
 } from "react";
 
 // const LazyLayout = lazy(() => import( /* webpackChunkName: "UsersPage" */ "Layout/AppLayout"));
-const HomePage = lazy(() => import( /* webpackChunkName: "HomePage" */ "Pages/HomePage"));
-
+const HomePage = lazy(() => import(/* webpackChunkName: "HomePage" */ "Pages/HomePage"));
 
 export const appRoutes = [
 	// {
@@ -20,4 +19,3 @@ export const appRoutes = [
 		name      : "Home - DashBoard",
 	},
 ];
-

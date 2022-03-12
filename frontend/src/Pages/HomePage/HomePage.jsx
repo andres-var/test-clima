@@ -1,13 +1,12 @@
 import React from "react";
 
-import Slider         from "Components/Slider";
-import Nav            from "Components/Nav";
-import Footer         from "Components/Footer";
-import Climates       from "Components/Climates";
+import Slider           from "Components/Slider";
+import Nav              from "Components/Nav";
+import Footer           from "Components/Footer";
+import Climates         from "Components/Climates";
 import RepeaterZipCodes from "Components/RepeaterZipCodes";
 
-
-const HomePage = () => {
+function HomePage() {
 	return (
 		<>
 			<Nav />
@@ -17,6 +16,6 @@ const HomePage = () => {
 			<Footer />
 		</>
 	);
-};
+}
 
 export default HomePage;

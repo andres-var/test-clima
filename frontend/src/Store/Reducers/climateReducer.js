@@ -15,30 +15,30 @@ const climateReducer = (state = initialState, action) => {
 		case ADD_CLIMATE_STARTED:
 			return {
 				...state,
-				loading: true
+				loading : true,
 			};
 		case ADD_CLIMATE_SUCCESS:
 			return {
 				...state,
-				loading: false,
-				error: null,
+				loading  : false,
+				error    : null,
 				climates : [...state.climates, action?.payload],
 			};
 		case ADD_CLIMATE_FAILURE:
 			return {
 				...state,
-				loading: false,
-				error: action.payload.error
+				loading : false,
+				error   : action.payload.error,
 			};
 		case DELETE_CLIMATE:
 			return {
 				...state,
-				climates : state.climates.filter((climate, index) => index !== action.payload.index)
+				climates : state.climates.filter((climate, index) => index !== action.payload.index),
 			};
 		case CLEAR_CLIMATE:
 			return {
 				...state,
-				climates : []
+				climates : [],
 			};
 		default:
 			return state;
